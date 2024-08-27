@@ -26,10 +26,9 @@ print("PO!")
 time.sleep(1)
 
 print("Jogador: ",escolha)
-time.sleep(1)
 print("Computador: ",adv_escolha)
-
-if adv==0:
+time.sleep(1)
+if adv==0: #Pedra
     if jogada ==0:
         print("Empate")
     elif jogada==1:
@@ -37,20 +36,19 @@ if adv==0:
     elif jogada==2:    
         print("Computador venceu")
         
-elif adv == 1:
+elif adv == 1: #Papel
     if jogada ==0:
-        print("Jogador venceu")
+        print("Computador venceu")
     elif jogada==1:
         print("Empate")
     elif jogada==2:    
-        print("Computador venceu")
+        print("Jogador venceu")
     
-else:
+else: #Tesoura
     if jogada ==0:
         print("Jogador venceu")
     elif jogada==1:
         print("Computador venceu")
-
     elif jogada==2:    
         print("Empate")
     

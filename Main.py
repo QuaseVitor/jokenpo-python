@@ -2,6 +2,8 @@ from random import *
 import time
 import os
 
+#sistema de apresentação de opções 
+
 os.system('cls')
 print("-----------------JOKENPO!-----------------")
 jokenpo = ["Pedra", "Papel", "Tesoura"]
@@ -11,6 +13,8 @@ escolha = ""
 for x in jokenpo:
     print("[",cont, "] - ", x)
     cont += 1
+    
+#Tomada de decisões
     
 jogada = int(input("Insira sua jogada: "))
 escolha = jokenpo[jogada]
@@ -28,28 +32,34 @@ time.sleep(1)
 print("Jogador: ",escolha)
 print("Computador: ",adv_escolha)
 time.sleep(1)
-if adv==0: #Pedra
-    if jogada ==0:
-        print("Empate")
-    elif jogada==1:
-        print("Jogador venceu")
-    elif jogada==2:    
-        print("Computador venceu")
-        
-elif adv == 1: #Papel
-    if jogada ==0:
-        print("Computador venceu")
-    elif jogada==1:
-        print("Empate")
-    elif jogada==2:    
-        print("Jogador venceu")
-    
-else: #Tesoura
-    if jogada ==0:
-        print("Jogador venceu")
-    elif jogada==1:
-        print("Computador venceu")
-    elif jogada==2:    
-        print("Empate")
-    
 
+#Resultado
+
+match adv: 
+    case 0: #Pedra
+        match jogada:
+            case 0:
+                print("Empate")
+            case 1:
+                print("Jogador venceu")
+            case _:    
+                print("Computador venceu")
+        
+    case 1: #Papel
+        match jogada:
+            case 0:
+                print("Computador venceu")
+            case 1:
+                print("Empate")
+            case _:    
+                print("Jogador venceu")
+    
+    case _: #Tesoura
+        match jogada:
+            case 0:
+                print("Jogador venceu")
+            case 1:
+                print("Computador venceu")
+            case _:    
+                print("Empate")
+    
